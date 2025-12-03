@@ -1,13 +1,9 @@
 # An excerpt from render.yaml
 services:
   - type: web
-    plan: standard 
+    plan: standard
+    runtime: image
+    name: n8n-service
+    image:
+      url: docker.io/n8nio/n8n:latest
     # …
-databases:
-  - name: n8n-db
-    plan: basic-256mb 
-
-
-  # Optionally increase database storage to any
-  # multiple of 5 GB by setting diskSizeGB:
-  # diskSizeGB: 5
